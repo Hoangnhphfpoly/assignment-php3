@@ -5,7 +5,9 @@
             <figure class="user-cover-image"></figure>
             <div class="user-info">
                 <img src="{{asset("admin_theme/assets/img/profile-17.jpg")}}" alt="avatar">
-                <h6 class="">Sonia Shaw</h6>
+                @if(\Illuminate\Support\Facades\Auth::check() == true)
+                    <h6>{{\Illuminate\Support\Facades\Auth::user()->name}}</h6>
+                @endif
                 <p class="">Project Leader</p>
             </div>
         </div>

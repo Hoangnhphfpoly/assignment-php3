@@ -15,4 +15,5 @@
 <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
 <script src="{{asset("admin_theme/plugins/apex/apexcharts.min.js")}}"></script>
 <script src="{{asset("admin_theme/assets/js/dashboard/dash_1.js")}}"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->

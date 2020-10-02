@@ -18,6 +18,7 @@
 
 @include("authentication.layout.script")
 
+@yield('script')
 </body>
 
 </html>

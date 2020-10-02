@@ -8,7 +8,7 @@
                     <div class="form-content">
 
                         <div class="d-flex user-meta">
-                            <img src="assets/img/profile-7.jpg" class="usr-profile" alt="avatar">
+                            <img src="{{asset('admin_theme/assets/img/profile-8.jpg')}}" class="usr-profile" alt="avatar">
                             <div class="">
                                 <p class="">Shaun Park</p>
                             </div>
