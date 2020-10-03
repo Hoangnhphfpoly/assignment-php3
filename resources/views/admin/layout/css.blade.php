@@ -11,3 +11,15 @@
 <link href="{{asset("admin_theme/plugins/apex/apexcharts.css")}}" rel="stylesheet" type="text/css">
 <link href="{{asset("admin_theme/assets/css/dashboard/dash_1.css")}}" rel="stylesheet" type="text/css" />
 <!-- END PAGE LEVEL PLUGINS/CUSTOM STYLES -->
+
+<!-- BEGIN PAGE LEVEL STYLES -->
+<link rel="stylesheet" type="text/css" href="{{asset('admin_theme/plugins/table/datatable/datatables.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('admin_theme/plugins/table/datatable/dt-global_style.css')}}">
+<!-- END PAGE LEVEL STYLES -->
+
+<link href="{{asset('admin_theme/assets/css/scrollspyNav.css')}}" rel="stylesheet" type="text/css" />
+<link href="{{asset('admin_theme/plugins/animate/animate.css')}}" rel="stylesheet" type="text/css" />
+<script src="{{asset('admin_theme/plugins/sweetalerts/promise-polyfill.js')}}"></script>
+<link href="{{asset('admin_theme/plugins/sweetalerts/sweetalert2.min.css')}}" rel="stylesheet" type="text/css" />
+<link href="{{asset('admin_theme/plugins/sweetalerts/sweetalert.css')}}" rel="stylesheet" type="text/css" />
+<link href="{{asset('admin_theme/assets/css/components/custom-sweetalert.css')}}" rel="stylesheet" type="text/css" />

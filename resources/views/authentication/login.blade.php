@@ -75,11 +75,16 @@
 @section('script')
     <script>
         @if (isset($mes))
-            Swal.fire({
-                title: '{{$mes}}',
-                position: 'middle',
-                icon: 'warning',
-            });
+            {{--Swal.fire({--}}
+            {{--    title: '{{$mes}}',--}}
+            {{--    position: 'middle',--}}
+            {{--    icon: 'warning',--}}
+            {{--});--}}
+        swal.fire({
+            title: '{{$mes}}',
+            type: 'warning',
+            padding: '2em'
+        });
         @endif
     </script>
 @endsection
