@@ -24,6 +24,7 @@
                                 <th>Avatar</th>
                                 <th>Address</th>
                                 <th>Status</th>
+                                <th>Action</th>
                                 <th class="no-content"></th>
                             </tr>
                             </thead>
@@ -35,7 +36,17 @@
                                 <td>{{$student->age}}</td>
                                 <td>{{$student->avatar}}</td>
                                 <td>{{$student->address}}</td>
-                                <td>{{$student->status}}</td>
+                                <td>@if($student->status == 1)
+                                        <span class="badge badge-primary">Đang học</span>
+                                    @elseif($student->status == 2)
+                                        <span class="badge badge-warning">Bảo lưu</span>
+                                    @else
+                                        <span class="badge badge-danger">Thôi học</span>
+                                    @endif
+                                </td>
+                                <td>
+                                    <a href="{{route('student.show', ['student' => $student->id])}}" class="btn btn-primary mb-2">Chi tiết</a>
+                                </td>
                                 <td></td>
                             </tr>
                             @endforeach
@@ -48,6 +59,7 @@
                                 <th>Avatar</th>
                                 <th>Address</th>
                                 <th>Status</th>
+                                <th>Action</th>
                                 <th></th>
                             </tr>
                             </tfoot>

@@ -27,6 +27,10 @@ Route::view('/auth_lockscreen', 'authentication.auth_lockscreen')->name('auth_lo
 Route::view('/index', 'admin.index')->middleware('auth')->name('index');
 Route::post('/post-register', [AuthController::class, 'register'])->name('post-register');
 
-Route::resource('student', StudentController::class);
+//Route::view('/test', 'student.index');
+Route::view('/test', 'student.show');
 
-Route::view('/test', 'student.index');
+Route::middleware('auth')->group(function (){
+    Route::view('/index', 'admin.index')->name('index');
+    Route::resource('student', StudentController::class);
+});
