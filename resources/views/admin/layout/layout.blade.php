@@ -42,6 +42,9 @@
 
 @include("admin.layout.script")
 @yield('script')
+<script>
+
+</script>
 </body>
 
 </html>

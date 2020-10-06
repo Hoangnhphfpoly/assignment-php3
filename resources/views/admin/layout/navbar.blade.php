@@ -8,7 +8,7 @@
                 </a>
             </li>
             <li class="nav-item theme-text">
-                <a href="index-2.html" class="nav-link"> CORK </a>
+                <a href="" class="nav-link">HOOK</a>
             </li>
             <li class="nav-item toggle-sidebar">
                 <a href="javascript:void(0);" class="sidebarCollapse" data-placement="bottom">

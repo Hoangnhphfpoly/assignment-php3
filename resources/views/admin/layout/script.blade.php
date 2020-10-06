@@ -30,5 +30,4 @@
         selector: 'skill-input'
     });
     instance.addData(['PHP', 'Wordpress', 'Javascript', 'jQuery'])
-
 </script>

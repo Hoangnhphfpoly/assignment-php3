@@ -14,7 +14,7 @@ class StudentController extends Controller
      */
     public function index()
     {
-        $students = Student::all();
+        $students = Student::orderBy('created_at', 'desc')->get();
         return view('student.index', compact('students'));
     }
 
@@ -25,7 +25,7 @@ class StudentController extends Controller
      */
     public function create()
     {
-        //
+        return view('student.create');
     }
 
     /**
@@ -36,7 +36,11 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $newStudent = new Student();
+        $newStudent->fill($request->all());
+        $newStudent->save();
+
+        return redirect()->route('student.index')->with('msg', 'Thêm mới thông tin thành công');
     }
 
     /**
@@ -58,7 +62,7 @@ class StudentController extends Controller
      */
     public function edit(Student $student)
     {
-        //
+        return view('student.edit', compact('student'));
     }
 
     /**
@@ -70,7 +74,8 @@ class StudentController extends Controller
      */
     public function update(Request $request, Student $student)
     {
-        //
+        $data = Student::findOrFail($student->id)->update($request->all());
+        return redirect()->route('student.index')->with('msg', 'Cập nhật thông tin thành công');
     }
 
     /**
@@ -81,6 +86,9 @@ class StudentController extends Controller
      */
     public function destroy(Student $student)
     {
-        //
+        if ($student) {
+            $student->delete();
+        };
+        return redirect()->route('student.index')->with('msg', 'Xóa thành công');
     }
 }

@@ -28,7 +28,7 @@ Route::view('/index', 'admin.index')->middleware('auth')->name('index');
 Route::post('/post-register', [AuthController::class, 'register'])->name('post-register');
 
 //Route::view('/test', 'student.index');
-Route::view('/test', 'student.show');
+Route::view('/test', 'student.create');
 
 Route::middleware('auth')->group(function (){
     Route::view('/index', 'admin.index')->name('index');
