@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\StudentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,5 +27,10 @@ Route::view('/auth_lockscreen', 'authentication.auth_lockscreen')->name('auth_lo
 Route::view('/index', 'admin.index')->middleware('auth')->name('index');
 Route::post('/post-register', [AuthController::class, 'register'])->name('post-register');
 
+//Route::view('/test', 'student.index');
+Route::view('/test', 'student.create');
 
-
+Route::middleware('auth')->group(function (){
+    Route::view('/index', 'admin.index')->name('index');
+    Route::resource('student', StudentController::class);
+});
