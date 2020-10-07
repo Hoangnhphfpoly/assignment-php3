@@ -195,7 +195,7 @@
                         <a href="{{route('student.index')}}"> List </a>
                     </li>
                     <li>
-                        <a href="#"> Add new </a>
+                        <a href="{{route('student.create')}}"> Add new </a>
                     </li>
                 </ul>
             </li>
